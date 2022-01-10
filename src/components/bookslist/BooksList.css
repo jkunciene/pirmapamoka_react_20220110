@@ -1,0 +1,5 @@
+/* aprasau kaip atrodys grid'as ar flex knygu saraso */
+.bookslist{
+    display: flex;
+    flex-wrap: wrap;
+}

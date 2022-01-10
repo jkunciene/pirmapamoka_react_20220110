@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import BooksList from "./components/bookslist/BooksList";
+import Article from "./components/article/Article";
+
+import data from './data/data'
 
 function App() {
+  //console.log(data);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        {data.map(oneArticle =>
+            <Article propsData=
+                {{
+                    key:oneArticle.id,
+                    title:oneArticle.title,
+                    description:oneArticle.description
+                }} />)
+              }
+
+     <BooksList/>
     </div>
   );
 }
